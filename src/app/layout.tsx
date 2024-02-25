@@ -1,12 +1,8 @@
 "use client";
-import store, { RootState, useAppSelector } from "../store/index";
+import store from "../store/index";
 import "./globals.css";
-import type { Metadata } from "next";
 import { Provider } from "react-redux";
 import "react-toastify/dist/ReactToastify.css";
-
-import { usePathname } from "next/navigation";
-
 import { useState } from "react";
 import Sidebar from "@/components/Layout/Sidebar";
 import Header from "@/components/Layout/Header";

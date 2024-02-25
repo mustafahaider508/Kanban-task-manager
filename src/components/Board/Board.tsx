@@ -1,3 +1,4 @@
+"use client";
 import { useAppDispatch, useAppSelector } from "@/store";
 import React, { useEffect, useState } from "react";
 import ViewTask from "../Models/ViewTask";

@@ -1,3 +1,4 @@
+"use client";
 import { Dialog, Transition } from "@headlessui/react";
 import { Dispatch, Fragment, SetStateAction } from "react";
 import { useAppDispatch, useAppSelector } from "@/store";
