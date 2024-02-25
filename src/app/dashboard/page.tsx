@@ -1,17 +1,18 @@
 "use client";
-import Dashboard from "@/components/Dashboard";
-import React, { useState } from "react";
-
-function page() {
+import React, { useState, Suspense } from "react";
+const Dashboard = React.lazy(() => import("@/components/Dashboard"));
+function Page(): React.JSX.Element {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <div>
-      <Dashboard
-        isSidebarOpen={isSidebarOpen}
-        setIsSidebarOpen={setIsSidebarOpen}
-      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Dashboard
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
+      </Suspense>
     </div>
   );
 }
 
-export default page;
+export default Page;

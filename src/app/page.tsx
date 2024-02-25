@@ -1,11 +1,12 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
-    router.push("/dashboard?name=Platform Launch");
+    router.push("/dashboard?name=Platform Launch ");
   }, []);
-  return <p>Kanban Task Managment</p>;
+  return <p></p>;
 }
